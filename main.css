@@ -1,5 +1,18 @@
+/* Estilos base */
+:root {
+  --primary-color: #827081;
+  --secondary-color: #283845;
+  --tertiary-color: #E3D0D8;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+/* Estilos de header */
 header {
-  background-color: #827081;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 20px;
   display: flex;
@@ -48,8 +61,10 @@ a {
   width: 100%;
   height: auto;
 }
+
+/* Estilos de footer */
 footer {
-  background-color: #827081;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 20px;
 }
@@ -110,10 +125,7 @@ footer {
   }
 }
 
-body {
-  font-family:  'Roboto', sans-serif;
-}
-
+/* Estilos del gráfico */
 #myChart {
   margin-right: 200px;
   margin-top: 50px;
@@ -122,13 +134,14 @@ body {
 .download-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #283845;
+  background-color: var(--secondary-color);
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.2s;
   margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
+  margin-left: 50px; /* Modificado */
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -136,11 +149,20 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.download-btn:hover {
-  background-color: #E3D0D8;
-  color: #fff;
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: #333;
 }
 
-.download-btn i {
-  margin-right: 5px;
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #333;
+  text-align: left;
+  margin-left: 50px;
 }
