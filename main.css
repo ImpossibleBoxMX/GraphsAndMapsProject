@@ -1,0 +1,146 @@
+header {
+  background-color: #827081;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 1080px) {
+  header {
+    padding: 10px;
+  }
+
+  ul {
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+footer {
+  background-color: #827081;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-col {
+  flex-basis: 50%;
+}
+
+.right-col {
+  flex-basis: 50%;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-nav li {
+  margin-left: 20px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .left-col,
+  .right-col {
+    flex-basis: auto;
+    text-align: center;
+  }
+
+  .footer-nav {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .footer-nav li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+body {
+  font-family:  'Roboto', sans-serif;
+}
+
+#myChart {
+  margin-right: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px
+}
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #283845;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn:hover {
+  background-color: #E3D0D8;
+  color: #fff;
+}
+
+.download-btn i {
+  margin-right: 5px;
+}
