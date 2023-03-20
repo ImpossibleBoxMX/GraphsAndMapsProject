@@ -166,3 +166,23 @@ h3 {
   text-align: left;
   margin-left: 50px;
 }
+
+@media (max-width: 480px) {
+  /* Estilos para pantallas de hasta 480px de ancho */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-bottom: 20px;
+  }
+  
+  #myChart {
+    margin-right: 0;
+  }
+  
+  h3 {
+    margin-left: 0;
+  }
+}
