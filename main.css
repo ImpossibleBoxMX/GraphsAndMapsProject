@@ -1,6 +1,6 @@
 /* Estilos base */
 :root {
-  --primary-color: #827081;
+  --primary-color: #ffffff;
   --secondary-color: #283845;
   --tertiary-color: #E3D0D8;
 }
@@ -12,9 +12,10 @@ body {
 
 /* Estilos de header */
 header {
+  margin-top: 10px;
   background-color: var(--primary-color);
   color: #fff;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,15 +53,19 @@ a {
 }
 
 .logo {
-  flex: 1;
+  margin-top: 25 px;
+  width: 90px;
+  height: 40px;
   display: flex;
   align-items: center;
 }
 
 .logo img {
-  width: 100%;
+  max-width: 350%;
   height: auto;
 }
+
+
 
 /* Estilos de footer */
 footer {
@@ -223,5 +228,41 @@ td {
 
   table {
     min-width: 700px;
+  }
+}
+.barra-degradada {
+  height: 10px;
+  background-image: linear-gradient(to right, rgb(174, 0, 255), rgb(250, 47, 81), rgb(0, 255, 234));
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+.texto-ejemplo {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 5spx 0;
+  line-height: 1.5;
+}
+.texto-especial {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  text-align: left;
+  line-height: 1.5;
+}
+.separador {
+  border-top: 1px solid rgb(87, 87, 87);
+}
+
+@media screen and (max-width: 768px) {
+  .separador {
+    border-top: none;
+    border-left: 2px solid black;
+    height: 20px;
+    width: 100%;
   }
 }
