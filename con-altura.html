@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="static/img/favicon.ico">
+    <title>Altura topográfica del Municipio de Papalotla de Xicohténcatl| GraphsAndMaps | Estantería Digital de Papalotla </title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@6.6.1/dist/ol.js"></script>
+
+    </head>
+
+    <body>
+    <!-- Área del header -->
+       
+        <div class="barra-degradada"></div>
+         <header>
+            <div class="logo">
+             <img src="https://estanteriadigitalpapalotla.s3.us-east-2.amazonaws.com/EstanteriaDigitalDePapalotla/static/estanter%C3%ADa-negro.png" alt="Logo de la empresa">
+            </div>
+            <nav>
+             <ul>
+             <li><p class="texto-ejemplo"> ☍ Graphs And Maps Project</p></li>
+            </ul>
+            </nav>
+        </header>
+    <!-- Finaliza área del header -->
+  
+    <div class="separador"></div>
+
+        <h1>Altura topográfica del Municipio de Papalotla de Xicohténcatl.</h1>
+        <div class="separador"></div>
+        <br>
+        <div class="table-container">
+          <iframe width="100%" height="300px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/en/map/altura-topografica-del-municipio-de-papalotla-de-x_520672?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe>
+          <br>
+          <br>
+          <div class="separador"></div>
+        <!-- Área de la gráfica de ChartJS -->
+        <canvas id="alturas-chart" width="700" height="200"></canvas>
+        <!-- Finaliza de la gráfica de ChartJS -->
+
+    <!--Área de la tabla-->
+
+                <table>
+                  <tr>
+                      <td>Coordenadas</td>
+                      <td>Nombre</td>
+                      <td>Altura sobre el nivel de mar (m.s.n.m)</td>
+                  </tr>
+                  <tr>
+                      <td>19.211462, -98.132734</td>
+                      <td>Punto más alto: Frontera con Acuamanala en las faldas de Volcán Malinche</td>
+                      <td>2,627</td>
+                  </tr>
+                  <tr>
+                      <td>19.138084, -98.224525</td>
+                      <td>  Punto más bajo: Río Atoyac en la frontera con Puebla </strong> </td>
+                      <td>2,169</td>
+                  </tr>
+                  <tr>
+                      <td>19.156014, -98.212560</td>
+                      <td>Cumbre del Cerro de la Luna</td>
+                      <td>2,262</td>
+                  </tr>
+                  <tr>
+                      <td>19.155983, -98.217055</td>
+                      <td>Base del Cerro de la Luna</td>
+                      <td>2,221</td>
+                  </tr>
+                  <tr>
+                      <td>19.169930, -98.204269</td>
+                      <td>Plaza de la Constitución de Papalotla</td>
+                      <td>2,252</td>
+                  </tr>
+                  <tr>
+                      <td>19.150807, -98.223716</td>
+                      <td>Crucero de Panzacola</td>
+                      <td>2,195</td>
+                  </tr>
+              </table>
+
+              <div class="creditos">1. Metros sobre el nivel del mar</div>
+              </div>
+          <!--Finaliza área de la tabla-->
+
+
+     <div class="separador"></div>
+
+     <br>
+     <a class="download-btn" href="https://estanteriadigitalpapalotla.s3.us-east-2.amazonaws.com/EstanteriaDigitalDePapalotla/Recursos+estad%C3%ADsticos/altura-topografica.csv" download="datos.csv">
+       <i class="icon" data-feather="download"></i>
+       <strong> Descargar base de datos (CSV)</strong>
+     </a>
+     
+   
+   <div class="separador"></div>
+   
+
+
+<div class="separador"></div>
+
+ 
+  <br>
+  <div class="creditos">
+    <strong>Base de datos de altitud:</strong>
+    <br>
+TessaDEM: <a href="https://tessadem.com/">https://tessadem.com/.</a> Bajo la licencia Open Data Commons Open Database (ODbL).
+
+  </div>
+
+<div class="separador"></div>
+
+  <footer>
+    <div class="footer-container">
+      <p class="texto-especial">&copy; 2023 Estatería Digital de Papalotla. Diseñado por Impossible Box de México. La asistencia técnica fue proporcionada por ChatGPT, un modelo de lenguaje natural de OpenAI. Gráficos hechos en ChartJS. Este mapa ha sido creado utilizando UMAP de OpenStreetMap.</p>
+        
+
+  </footer>
+
+  <script src="javascript/altura.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>
+    feather.replace();
+  </script>
+<script>
+  var map = new ol.Map({
+    target: 'map-container',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      })
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([-74.0060, 40.7128]),
+      zoom: 12
+    })
+  });
+</script>
+
+</body>
+</html>
