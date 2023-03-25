@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Defunciones históricas | GraphsAndMaps | Estantería Digital de Papalotla </title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@6.6.1/dist/ol.js"></script>
+
+    </head>
+
+    <body>
+    <!-- Área del header -->
+       
+        <div class="barra-degradada"></div>
+         <header>
+            <div class="logo">
+             <img src="https://estanteriadigitalpapalotla.s3.us-east-2.amazonaws.com/EstanteriaDigitalDePapalotla/static/estanter%C3%ADa-negro.png" alt="Logo de la empresa">
+            </div>
+            <nav>
+             <ul>
+             <li><p class="texto-ejemplo"> ☍ Graphs And Maps Project</p></li>
+            </ul>
+            </nav>
+        </header>
+    <!-- Finaliza área del header -->
+  
+    <div class="separador"></div>
+
+        <h1>Defunciones históricas: Papalotla, Mazatecochco, Tenancingo y Santa Catarina Ayometla (1990-2020)</h1>
+        
+        <!-- Área de la gráfica de ChartJS -->
+        <canvas id="defuncion" width="700" height="200"></canvas>
+        <!-- Finaliza de la gráfica de ChartJS -->
+
+     <div class="separador"></div>
+
+  <br>
+  <a class="download-btn" href="https://estanteriadigitalpapalotla.s3.us-east-2.amazonaws.com/EstanteriaDigitalDePapalotla/Salud+p%C3%BAblica/Mortalidad-Papalotla-Mun.csv" download="datos.csv">
+    <i class="icon" data-feather="download"></i>
+    <strong> Descargar base de datos (CSV)</strong>
+  </a>
+  
+
+<div class="linea-separadora"></div>
+<div class="separador"></div>
+
+    <!--Área de la tabla-->
+<div class="table-container">
+    <iframe width="100%" height="300px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/en/map/altura-topografica-del-municipio-de-papalotla-de-x_520672?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe>
+
+  </div>
+          <!--Finaliza área de la tabla-->
+
+
+<div class="separador"></div>
+<div class="creditos">
+  INEGI. (2020). Áreas Geoestadísticas Estatales.
+  <br>
+   Instituto Nacional de Estadística y Geografía. 
+   Recuperado el 18 de febrero de 2023, de https://www.inegi.org.mx/app/areasgeograficas/?ag=29
+</div>
+
+<div class="separador"></div>
+
+  <footer>
+    <div class="footer-container">
+      <p class="texto-especial">&copy; 2023 Estatería Digital de Papalotla. Diseñado por Impossible Box de México. La asistencia técnica fue proporcionada por ChatGPT, un modelo de lenguaje natural de OpenAI. Gráficos hechos en ChartJS.</p>
+        
+
+  </footer>
+
+  <script src="javascript/poblacion-combo.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>
+    feather.replace();
+  </script>
+<script>
+  var map = new ol.Map({
+    target: 'map-container',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      })
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([-74.0060, 40.7128]),
+      zoom: 12
+    })
+  });
+</script>
+
+</body>
+</html>
