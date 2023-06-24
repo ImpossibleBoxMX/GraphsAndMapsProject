@@ -266,3 +266,39 @@ td {
     width: 100%;
   }
 }
+.barra-beta {
+  background-color: #ff5a5f;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.parrafo-centrado {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 55px;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.resaltado-1 {
+  color: #639fab;
+  font-weight: bold;
+}
+
+.resaltado-2 {
+  color: #864879;
+  font-weight: bold;
+}
+
+.resaltado-3 {
+  color: #087e8b;
+  font-weight: bold;
+}

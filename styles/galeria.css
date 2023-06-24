@@ -1,0 +1,31 @@
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .galeria a {
+    display: block;
+    width: 25%;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .galeria a:hover {
+    border: 2px solid #000;
+  }
+  
+  .galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .galeria p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
